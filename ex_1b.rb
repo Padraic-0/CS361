@@ -20,7 +20,9 @@ class RedBike < Bike
     @height
   end
 
-  def decrease_weight_by
+  def decreaseWeight
     @weight -= AMOUNT
   end
 end
+#1. Meaningful names say what they are, and reduce the time needed to analyze the name while in use to see what it does. They also need to be- 
+# predictable and not change format. If you are usign "_" in names don't also use Uppercase.
