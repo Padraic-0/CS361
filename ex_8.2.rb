@@ -9,6 +9,7 @@ class Poker
     puts "Players in the poker game:"
     @players.length().times { |i| puts "#{self.get_player_name(i)}: #{self.get_player_hand(i)}" }
     # [pretend there's code here]
+    
   end
 
   def get_results()
