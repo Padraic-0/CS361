@@ -3,12 +3,15 @@
 @name = "Johanna Jackson"
 
 # Mangle the name by reversing it or borgifying it
+<<<<<<< HEAD
 food = "1"
 def eat(food = "Tacos")
     puts "hello"
   end
 eat()
 puts food
+=======
+>>>>>>> 5f07cc9e41d0f010fa20aaa09bcafc36a1a4e8ef
 def modified_name(choose, name)
   if not choose
   split_name = @name.split
@@ -26,4 +29,8 @@ def modified_name(choose, name)
 end
 
 puts "New name: #{modified_name(false,@name)}"
+<<<<<<< HEAD
 puts "New borg name: #{modified_name(true,@name)}"
+=======
+puts "New borg name: #{modified_name(true,@name)}"
+>>>>>>> 5f07cc9e41d0f010fa20aaa09bcafc36a1a4e8ef
