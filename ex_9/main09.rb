@@ -1,7 +1,7 @@
 class Employee
 
-    def prepare(bike)
-      @bike = bike || nil
+    def prepare(bike = nil)
+      @bike = bike
       begin
         @bike.prepare()
       rescue
@@ -42,8 +42,13 @@ class Employee
     end
   
   end
+
+  class Unicycle
   
-  bikes = [BmxBike.new, RoadBike.new, MountainBike.new, Tricycle.new]
+  
+  end
+  
+  bikes = [BmxBike.new, RoadBike.new, MountainBike.new, Tricycle.new, Unicycle.new]
   
   employee = Employee.new
   
