@@ -2,35 +2,28 @@
 
 @name = "Johanna Jackson"
 
-# Mangle the name by reversing it or borgifying it
-<<<<<<< HEAD
-food = "1"
-def eat(food = "Tacos")
-    puts "hello"
-  end
-eat()
-puts food
-=======
->>>>>>> 5f07cc9e41d0f010fa20aaa09bcafc36a1a4e8ef
-def modified_name(choose, name)
-  if not choose
-  split_name = @name.split
+def reverse_name(name)
+  split_name = name.split
   reversed_name_components = split_name.reverse
-  new_name1 = reversed_name_components.join(' ')
-  return new_name1
+  reversed_name = reversed_name_components.join(' ')
+  return reversed_name
+end
+
+def borgify(name)
+  reverse_name = reverse_name(name)
+  return reverse_name += " Borg"
+end
+
+# Mangle the name by reversing it or borgifying it
+def modified_name(choose, name)
+  if choose == "reverse"
+  return reverse_name(name)
   end
-  if choose
-    split_name2 = @name.split
-    reversed_name_components2 = split_name2.reverse
-    reversed_name_components2 << "Borg"
-    new_name2 = reversed_name_components2.join(' ')
-    return new_name2
+  
+  if choose == "borg"
+    return borgify(name)
   end
 end
 
-puts "New name: #{modified_name(false,@name)}"
-<<<<<<< HEAD
-puts "New borg name: #{modified_name(true,@name)}"
-=======
-puts "New borg name: #{modified_name(true,@name)}"
->>>>>>> 5f07cc9e41d0f010fa20aaa09bcafc36a1a4e8ef
+puts "New name: #{modified_name("reverse",@name)}"
+puts "New borg name: #{modified_name("borg",@name)}"
